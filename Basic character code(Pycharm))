@@ -1,0 +1,55 @@
+#pycharm code!
+import turtle
+import os
+wn = turtle.Screen()
+wn.bgcolor("black")
+wn.title("--[Basic character code]--")
+
+#[border]
+border_pen = turtle.Turte()
+border_pen.spee(0)
+border_pen.color("white")
+border_pen.penup()
+border_pen.setposition(-300,-300)
+border_pen.pendown()
+border_pen.pensize(3)
+for side in range(4):
+  border_pen.fd(600)
+  border_pen.lt(60)
+border_pen.hideturtle()
+
+#create the player turtle
+player = turtle.Turtle()
+player.color("blue")
+player.shape("rectangle")
+player.penup
+player.speed(0)
+player.setposition(0, -250)
+player.setheading(90)
+
+#player movement(Left and right)
+playerspeed = 15
+def move_left():
+  x = player.xcor()
+  x -= playerspeed
+  if x < -280:
+    x = - 280
+  player.setx(x)
+ 
+def move_right():
+  x = player.xcor()
+  x + = playerspeed
+  if x > 280:
+    x = 280
+  player.setx(x)
+
+#keybinding
+turte.listen()
+turte.onkey(move_right, "Right")
+turte.onkey(move_left, "Left")
+  
+ 
+  
+  
+
+
