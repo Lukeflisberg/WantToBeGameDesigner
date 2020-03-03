@@ -1,0 +1,11 @@
+//go onto the offline dinogame
+//rightclick
+//go to inspect
+// go to console and pase the following code
+var originalRunner=Runner.prototype.gameOver
+// Overwrite gameover function so you don't die
+Runner.prototype.gameOver=function(){console.log("Its over when I say its over")}
+// Super speed run
+Runner.instance_.setSpeed(15000)
+// Change back to original game when you are sick of cheating
+Runner.prototype.gameOver=originalRunner
